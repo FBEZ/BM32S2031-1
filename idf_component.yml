@@ -1,5 +1,5 @@
 dependencies:
-  idf: '>=4.0'
-description: I2C driver for FBM320 digital barometer
-url: https://github.com/espressif/esp-bsp/tree/master/components/fbm320
-version: 1.0.3
+  idf: '>=4.4'
+description: I2C driver for BM32S2031-1 digital proximity sensor
+url: https://github.com/Ineltek-IT/BM32S2031-1.git
+version: 0.0.1

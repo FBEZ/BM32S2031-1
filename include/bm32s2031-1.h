@@ -1,5 +1,5 @@
 /*
- * SPDX-FileCopyrightText: 2015-2021 Espressif Systems (Shanghai) CO LTD
+ * SPDX-FileCopyrightText: 2022 Ineltek Italy
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -10,8 +10,16 @@
 extern "C" {
 #endif
 
-#include "driver/i2c.h"
+#include "driver/uart.h"
 
+
+#define BM32S2031_1_BAUDRATE 9600
+
+#define COMMENT 1
+
+void test();
+
+#ifndef COMMENT
 /**
  * @brief FMB320 configurable I2C address
  */
@@ -91,6 +99,9 @@ esp_err_t fbm320_init(fbm320_handle_t sensor);
  *     - ESP_FAIL Fail
  */
 esp_err_t fbm320_get_data(fbm320_handle_t sensor, const fbm320_measure_mode_t meas_mode, int32_t *const temperature, int32_t *const pressure);
+
+
+#endif
 
 #ifdef __cplusplus
 }

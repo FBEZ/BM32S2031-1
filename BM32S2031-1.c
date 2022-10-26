@@ -6,7 +6,15 @@
 
 #include <stdio.h>
 #include "driver/i2c.h"
-#include "fbm320.h"
+#include "bm32s2031-1.h"
+
+#define TESTVAL 10
+
+void test(){
+    printf("***************************************Hello world");
+}
+
+#ifndef COMMENT
 
 // FBM320 registers
 #define FBM320_WHO_AM_I                0x6Bu
@@ -214,3 +222,5 @@ esp_err_t fbm320_get_data(fbm320_handle_t sensor, const fbm320_measure_mode_t me
 
     return ret;
 }
+
+#endif
